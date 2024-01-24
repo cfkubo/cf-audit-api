@@ -2,12 +2,13 @@
 <img src="Broadcom-vmware.png" width="300" alt="Online Boutique" />
 </p>
 
+### The below procedure explain how to create UAA client and Query the TAS api for Audit reporting.
 
-### UAA TAS url:  https://uaa.SYS-DOMAIN
+### UAA TAS URL:  https://uaa.SYS-DOMAIN
 
-### UAA opsman url:  https://opman-url/uaa
+### UAA opsman URL:  https://opman-url/uaa
 
-### CF API url: https://api.SYS-DOMAIN/v3
+### CF API URL: https://api.SYS-DOMAIN/v3
 
 ### Login with admin client creds. The creds are under TAS tile credentials section for uaa "Admin Client Credentials"
 
