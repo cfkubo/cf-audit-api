@@ -9,11 +9,13 @@
 
 ### Target uaac client to TAS uaa
 
+```
 avannala@avannalaCX6H4 tas % uaac target uaa.sys.h2o-4-15402.h2o.vmware.com  --skip-ssl-validation
 uaac target : uaac target _
 
 Target: https://uaa.sys.h2o-4-15402.h2o.vmware.com
 Context: admin, from client admin
+```
 
 avannala@avannalaCX6H4 tas % uaac token client get admin -s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
