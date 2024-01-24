@@ -3,7 +3,7 @@
 </p>
 
 
-### UAA TAS url:  https://uaa.SYS-DOMAIN 
+### UAA TAS url:  https://uaa.SYS-DOMAIN
 
 ### UAA opsman url:  https://opman-url/uaa
 
@@ -73,9 +73,7 @@ uaac client add auditor1 -s auditor1   --authorized_grant_types client_credentia
 
 ```
 
-
-```
-# Fetch the bearer token via curl
+# Fetch the bearer token via curl https://uaa.SYS-DOEMAIN/oauth/token
 
 ```
 curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "auditor1:auditor1" -d grant_type=client_credentials
@@ -86,7 +84,7 @@ curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "auditor1:audito
 {"access_token":"eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg","token_type":"bearer","expires_in":43199,"scope":"cloud_controller.admin_read_only","jti":"06abf6ff1d4845ab952b42f01ef06879"}%
 ```
 
-# Fetch the apps endpoint via curl
+# Fetch the apps endpoint via curl https://api.SYS-DOMIAN/v3/apps
 
 ```
 curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg" -k
@@ -115,6 +113,7 @@ curl "https://api.sys.XXXXXXXXXX.h2o.vmware.com/v3/spaces" \
 ```
 
 # Fetch Orgs endpoint via curl
+
 ```
 curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
   -X GET \
@@ -122,6 +121,7 @@ curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
 ```
 
 # Fetch Roles endpoint via curl
+
 ```
 curl -k "https://api.sys.h2o-4-15402.h2o.vmware.com/v3/roles" \
   -X GET \
@@ -130,6 +130,7 @@ curl -k "https://api.sys.h2o-4-15402.h2o.vmware.com/v3/roles" \
 ```
 
 # Fetch Spaces endpoint via curl
+
 ```
 curl "https://api.example.org/v3/spaces" \
 -X GET \
@@ -137,6 +138,7 @@ curl "https://api.example.org/v3/spaces" \
 ```
 
 # Fetch Spaces Users endpoint via curl
+
 ```
 curl "https://api.example.org/v3/spaces/:guid/users" \
   -X GET \
