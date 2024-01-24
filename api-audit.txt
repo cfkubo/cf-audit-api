@@ -3,19 +3,19 @@
 </p>
 
 
-### UAAtas url:  uaa.<sys.domain> fortas
+### UAA TAS url:  https://uaa.sys.domain
 
-### UAA opsman url:  <opmanurl>/uaa
+### UAA opsman url:  https://opmanurl/uaa
 
 ### Target uaac client totas uaa
 
 ### Login with admin client creds. The creds are undertas tile credentials section for uaa "client admin credentials"
 
 
-#tas UAA Target
+# TAS UAA Target
 ```
 tas % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
-
+uaac target : uaac target _
 
 Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
@@ -36,6 +36,7 @@ Context: admin, from client admin
 
 ```
 tas % uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
+
   scope: cloud_controller.admin_read_only scim.read
   client_id: arul6
   resource_ids: none
