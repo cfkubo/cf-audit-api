@@ -3,9 +3,9 @@
 </p>
 
 
-### UAA TAS url:  https://uaa.sys.domain
+### UAA TAS url:  https://uaa.sys-domain
 
-### UAA opsman url:  https://opmanurl/uaa
+### UAA opsman url:  https://opman-url/uaa
 
 ### Login with admin client creds. The creds are under tas tile credentials section for uaa "client admin credentials"
 
