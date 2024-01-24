@@ -75,7 +75,7 @@ uaac client add auditor1 -s auditor1   --authorized_grant_types client_credentia
 ```
 
 # Fetch the bearer token via curl
-### curl https://uaa.SYS-DOEMAIN/oauth/token
+### curl https://uaa.SYS-DOMAIN/oauth/token
 
 ```
 curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "auditor1:auditor1" -d grant_type=client_credentials
