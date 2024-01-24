@@ -5,7 +5,7 @@
 
 ### UAA TAS url:  uaa.<sys.domain> for tas
 
-### UAA opsman url:  <opmanurl>/uaa
+### UAA opsman url:  <<opmanurl>>/uaa
 
 ### Target uaac client to TAS uaa
 
@@ -36,6 +36,7 @@ Context: admin, from client admin
 
 ```
 avannala@avannalaCX6H4 tas % uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
+
   scope: cloud_controller.admin_read_only scim.read
   client_id: arul6
   resource_ids: none

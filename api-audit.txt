@@ -1,17 +1,18 @@
 <p align="center">
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftanzu.vmware.com%2Fapplication-service&psig=AOvVaw0UcK2UNIcqS4f2oGbZsTB_&ust=1706142536741000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCODxkrTi9IMDFQAAAAAdAAAAABAD" width="300" alt="Online Boutique" />
+<img src="Broadcom-vmware.png" width="300" alt="Online Boutique" />
 </p>
 
 
-# uaa TAS url:  uaa.sys.domain for tas
+### UAA TAS url:  uaa.<sys.domain> for tas
 
-# uaa opsman url:  opmanurl/uaa
+### UAA opsman url:  <opmanurl>/uaa
 
-# Target uaac client to TAS uaa
+### Target uaac client to TAS uaa
 
-# Login with admin client creds. The creds are under TAS tile credentials section for uaa "client admin credentials"
+### Login with admin client creds. The creds are under TAS tile credentials section for uaa "client admin credentials"
 
 
+# TAS UAA Target
 ```
 avannala@avannalaCX6H4 tas % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
 uaac target : uaac target _
@@ -20,6 +21,7 @@ Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
 ```
 
+# Login
 ```
 avannala@avannalaCX6H4 tas % uaac token client get admin -s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -30,7 +32,7 @@ Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
 ```
 
-### Create UAA admin readyonly client
+# Create UAA admin readyonly client
 
 ```
 avannala@avannalaCX6H4 tas % uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
@@ -46,7 +48,7 @@ avannala@avannalaCX6H4 tas % uaac client add arul6 -s arul6  --authorized_grant_
   id: arul6
 
 ```
-### Fetch the token via curl
+# Fetch the brearer token via curl
 
 ```
 avannala@avannalaCX6H4 tas % curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "arul5:arul5" -d grant_type=client_credentials
@@ -62,7 +64,7 @@ avannala@avannalaCX6H4 tas % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/ap
 {"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
 ```
 
-### Fetch the users endpoint via curl
+# Fetch the users endpoint via curl
 
 ```
 curl -k 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/Users' -i -X GET \
