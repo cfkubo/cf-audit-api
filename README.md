@@ -15,7 +15,9 @@
 # TAS UAA Target
 ```
 uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
+```
 
+```
 Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
 ```
@@ -23,7 +25,9 @@ Context: admin, from client admin
 # Login
 ```
 uaac token client get admin -s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
 
+```
 WARNING: Decoding token without verifying it was signed by its authoring UAA
 
 Successfully fetched token via client credentials grant.
@@ -36,6 +40,7 @@ Context: admin, from client admin
 ```
 uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
 ```
+
 ```
   scope: cloud_controller.admin_read_only scim.read
   client_id: arul6
@@ -54,6 +59,7 @@ uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --sc
 ```
 curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "arul5:arul5" -d grant_type=client_credentials
 ```
+
 ```
 {"access_token":"eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg","token_type":"bearer","expires_in":43199,"scope":"cloud_controller.admin_read_only","jti":"06abf6ff1d4845ab952b42f01ef06879"}%
 ```
