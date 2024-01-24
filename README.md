@@ -3,7 +3,7 @@
 </p>
 
 
-### UAAtas url:  https://uaa.sys.domain
+### UAA TAS url:  https://uaa.sys.domain
 
 ### UAA opsman url:  https://opmanurl/uaa
 
