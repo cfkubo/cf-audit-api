@@ -4,14 +4,14 @@ uaa client creds link:  uaa.admin_client_credentials under TAS tile credenti
 sample link: https://opsman.XXXXXXXXX.h2o.vmware.com/api/v0/deployed/products/cf-8ba032431a77d5106d9e/credentials/.uaa.admin_client_credentials
 
 ```
-avannala@avannalaCX6H4 workspace % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
+ workspace % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
 
 
 Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % uaac token client get
+ workspace % uaac token client get
 
 Client ID:  admin
 Client secret:  ********************************
@@ -23,25 +23,25 @@ Context: admin, from client admin
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % uaac user add arul -p vannala --emails arul.vannala@broadcom.com
+ workspace % uaac user add arul -p vannala --emails arul.vannala@broadcom.com
 
 user account successfully added
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % uaac member add  cloud_controller.admin_read_only  arul
+ workspace % uaac member add  cloud_controller.admin_read_only  arul
 
 success
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % uaac member add  scim.read  arul
+ workspace % uaac member add  scim.read  arul
 
 success
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % cf login
+ workspace % cf login
 
 API endpoint: https://api.sys.XXXXXXXXX.h2o.vmware.com
 
@@ -73,14 +73,14 @@ space:          test
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % cf oauth-token
+ workspace % cf oauth-token
 
 bearer eyJqdGkiOiJmMmU0NjExZjNlZmE0YzBkOWE4OTE2M2NhZjE3NDk3YiIsImNsaWVudF9hdXRoX21ldGhvZCI6Im5vbmUiLCJzdWIiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluX3JlYWRfb25seSIsIm9wZW5pZCIsInNjaW0ucmVhZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhcnVsIiwiZW1haWwiOiJhcnVsLnZhbm5hbGFAYnJvYWRjb20uY29tIiwiYXV0aF90aW1lIjoxNzA2MDI5MDk2LCJyZXZfc2lnIjoiODExNzg5NCIsImlhdCI6MTcwNjAyOTA5NiwiZXhwIjoxNzA2MDM2Mjk2LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.CfBae-9eGXAFTkqjR7QyCiBRz2GYa6wCBRWD9OhgcgDsa2kIi_OxodGboxKAT7yh51hBdymP0oO4K2UCcgFNQnG0YH0UC78_V4VZpwHYbwI7MFwEVcFTwbqnKCH7llOZ99NXGlWZAy0FRVAf1Bc__WtINfuiiYMR0qPtXDDZoYq4z7Ap0MTDeNdUQjxkn2qCTfgn4WeX4fFw0UA3zfBAU5vqvK_LUmlD6OUcaO92gpDfsh3YLERgjv1E25oSQE5n9HRifc37CEAsz5tm8cwF_vhJBpNpyE0-aXl_HXEoAC6e7M8cuV2LGJXGvQUs2LVKEz1H48qgka3qROSF5jioDw
-avannala@avannalaCX6H4 workspace %
+ workspace %
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJhbGciOiJSUzI1N9d2d4811-9ecd-464b-8e80-eyJqdGkiOiJmMmU0NjExZjNlZmE0YzBkOWE4OTE2M2NhZjE3NDk3YiIsImNsaWVudF9hdXRoX21ldGhvZCI6Im5vbmUiLCJzdWIiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluX3JlYWRfb25seSIsIm9wZW5pZCIsInNjaW0ucmVhZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhcnVsIiwiZW1haWwiOiJhcnVsLnZhbm5hbGFAYnJvYWRjb20uY29tIiwiYXV0aF90aW1lIjoxNzA2MDI5MDk2LCJyZXZfc2lnIjoiODExNzg5NCIsImlhdCI6MTcwNjAyOTA5NiwiZXhwIjoxNzA2MDM2Mjk2LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.CfBae-9eGXAFTkqjR7QyCiBRz2GYa6wCBRWD9OhgcgDsa2kIi_OxodGboxKAT7yh51hBdymP0oO4K2UCcgFNQnG0YH0UC78_V4VZpwHYbwI7MFwEVcFTwbqnKCH7llOZ99NXGlWZAy0FRVAf1Bc__WtINfuiiYMR0qPtXDDZoYq4z7Ap0MTDeNdUQjxkn2qCTfgn4WeX4fFw0UA3zfBAU5vqvK_LUmlD6OUcaO92gpDfsh3YLERgjv1E25oSQE5n9HRifc37CEAsz5tm8cwF_vhJBpNpyE0-aXl_HXEoAC6e7M8cuV2LGJXGvQUs2LVKEz1H48qgka3qROSF5jioDw" -k
+ workspace % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJhbGciOiJSUzI1N9d2d4811-9ecd-464b-8e80-eyJqdGkiOiJmMmU0NjExZjNlZmE0YzBkOWE4OTE2M2NhZjE3NDk3YiIsImNsaWVudF9hdXRoX21ldGhvZCI6Im5vbmUiLCJzdWIiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluX3JlYWRfb25seSIsIm9wZW5pZCIsInNjaW0ucmVhZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhcnVsIiwiZW1haWwiOiJhcnVsLnZhbm5hbGFAYnJvYWRjb20uY29tIiwiYXV0aF90aW1lIjoxNzA2MDI5MDk2LCJyZXZfc2lnIjoiODExNzg5NCIsImlhdCI6MTcwNjAyOTA5NiwiZXhwIjoxNzA2MDM2Mjk2LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.CfBae-9eGXAFTkqjR7QyCiBRz2GYa6wCBRWD9OhgcgDsa2kIi_OxodGboxKAT7yh51hBdymP0oO4K2UCcgFNQnG0YH0UC78_V4VZpwHYbwI7MFwEVcFTwbqnKCH7llOZ99NXGlWZAy0FRVAf1Bc__WtINfuiiYMR0qPtXDDZoYq4z7Ap0MTDeNdUQjxkn2qCTfgn4WeX4fFw0UA3zfBAU5vqvK_LUmlD6OUcaO92gpDfsh3YLERgjv1E25oSQE5n9HRifc37CEAsz5tm8cwF_vhJBpNpyE0-aXl_HXEoAC6e7M8cuV2LGJXGvQUs2LVKEz1H48qgka3qROSF5jioDw" -k
 
 {"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
 ```
@@ -113,7 +113,7 @@ x-xss-protection: 1; mode=block
 ```
 
 ```
-avannala@avannalaCX6H4 tas % curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -d grant_type=client_credentials
+ tas % curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -d grant_type=client_credentials
 
 {"access_token":"eyJqdGkiOiI5MGY0ZWVhMDg4NzA0ZDc2YWUzNjdjNTY2ZTUyYTgwMCIsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiY2xpZW50cy5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbGllbnRzLnNlY3JldCIsImNsaWVudHMud3JpdGUiLCJ1YWEuYWRtaW4iLCJzY2ltLndyaXRlIiwic2NpbS5yZWFkIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xpZW50cy5zZWNyZXQiLCJjbGllbnRzLndyaXRlIiwidWFhLmFkbWluIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJhZG1pbiIsImNpZCI6ImFkbWluIiwiYXpwIjoiYWRtaW4iLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjQ5MDQ1OTI1IiwiaWF0IjoxNzA2MDQwOTczLCJleHAiOjE3MDYwODQxNzMsImlzcyI6Imh0dHBzOi8vdWFhLnN5cy5oMm8tNC0xNTQwMi5oMm8udm13YXJlLmNvbS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJzY2ltIiwicGFzc3dvcmQiLCJjbGllbnRzIiwidWFhIiwiYWRtaW4iXX0.GSHB-UaH9VYsGSDa8Ouzz2NcJqbNTDDDPx_u9ntpvEhhQOEjZIZTxq21PU5VwGxs4EDTRv4cv8XUQ7co7fnLg0JMn_-_UlWW-uwVALXjZ5aZFaMip_28pYEAlrmKs9nlXRnC_AuDjUTrFvkAtfGwJ-PpJEjPLKzG6lbpf2oibLSEE84AROylgR50uwD-Shy3myBvrns7xDb_m_Cfi4UR7HVdCrT4-dXkaCLlDML5EdS0ZonAA8PBPZmjwhhJfDC85yXsW5svmMxDAIfMs1zdkPP4i7jKitWuySeOqu0QCFhNgk4IAtWguBzSyzgvNniTm1fO_SnNWJ6l07yrOZNPCQ","token_type":"bearer","expires_in":43199,"scope":"clients.read password.write clients.secret clients.write uaa.admin scim.write scim.read","jti":"90f4eea088704d76ae367c566e52a800"}%
 ```
