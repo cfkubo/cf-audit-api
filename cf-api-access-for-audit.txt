@@ -1,13 +1,13 @@
 Create a service account: https://docs.vmware.com/en/VMware-Tanzu-Application-Service/5.0/tas-for-vms/uaa-user-management.html#create-an-admin-readonly-user-1Authenticating: https://cli.cloudfoundry.org/en-US/v6/auth.html
 
 uaa client creds link:  uaa.admin_client_credentials under TAS tile credentials
-sample link: https://opsman.h2o-4-15402.h2o.vmware.com/api/v0/deployed/products/cf-8ba032431a77d5106d9e/credentials/.uaa.admin_client_credentials
+sample link: https://opsman.XXXXXXXXX.h2o.vmware.com/api/v0/deployed/products/cf-8ba032431a77d5106d9e/credentials/.uaa.admin_client_credentials
 
 ```
-avannala@avannalaCX6H4 workspace % uaac target uaa.sys.h2o-4-15402.h2o.vmware.com  --skip-ssl-validation
+avannala@avannalaCX6H4 workspace % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
 
 
-Target: https://uaa.sys.h2o-4-15402.h2o.vmware.com
+Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 ```
 
 ```
@@ -18,7 +18,7 @@ Client secret:  ********************************
 WARNING: Decoding token without verifying it was signed by its authoring UAA
 
 Successfully fetched token via client credentials grant.
-Target: https://uaa.sys.h2o-4-15402.h2o.vmware.com
+Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
 ```
 
@@ -43,7 +43,7 @@ success
 ```
 avannala@avannalaCX6H4 workspace % cf login
 
-API endpoint: https://api.sys.h2o-4-15402.h2o.vmware.com
+API endpoint: https://api.sys.XXXXXXXXX.h2o.vmware.com
 
 Email: arul
 Password:
@@ -65,7 +65,7 @@ Targeted org arul.
 
 Targeted space test.
 
-API endpoint:   https://api.sys.h2o-4-15402.h2o.vmware.com
+API endpoint:   https://api.sys.XXXXXXXXX.h2o.vmware.com
 API version:    3.152.0
 user:           arul
 org:            arul
@@ -80,17 +80,17 @@ avannala@avannalaCX6H4 workspace %
 ```
 
 ```
-avannala@avannalaCX6H4 workspace % curl https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJhbGciOiJSUzI1N9d2d4811-9ecd-464b-8e80-eyJqdGkiOiJmMmU0NjExZjNlZmE0YzBkOWE4OTE2M2NhZjE3NDk3YiIsImNsaWVudF9hdXRoX21ldGhvZCI6Im5vbmUiLCJzdWIiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluX3JlYWRfb25seSIsIm9wZW5pZCIsInNjaW0ucmVhZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhcnVsIiwiZW1haWwiOiJhcnVsLnZhbm5hbGFAYnJvYWRjb20uY29tIiwiYXV0aF90aW1lIjoxNzA2MDI5MDk2LCJyZXZfc2lnIjoiODExNzg5NCIsImlhdCI6MTcwNjAyOTA5NiwiZXhwIjoxNzA2MDM2Mjk2LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.CfBae-9eGXAFTkqjR7QyCiBRz2GYa6wCBRWD9OhgcgDsa2kIi_OxodGboxKAT7yh51hBdymP0oO4K2UCcgFNQnG0YH0UC78_V4VZpwHYbwI7MFwEVcFTwbqnKCH7llOZ99NXGlWZAy0FRVAf1Bc__WtINfuiiYMR0qPtXDDZoYq4z7Ap0MTDeNdUQjxkn2qCTfgn4WeX4fFw0UA3zfBAU5vqvK_LUmlD6OUcaO92gpDfsh3YLERgjv1E25oSQE5n9HRifc37CEAsz5tm8cwF_vhJBpNpyE0-aXl_HXEoAC6e7M8cuV2LGJXGvQUs2LVKEz1H48qgka3qROSF5jioDw" -k
+avannala@avannalaCX6H4 workspace % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJhbGciOiJSUzI1N9d2d4811-9ecd-464b-8e80-eyJqdGkiOiJmMmU0NjExZjNlZmE0YzBkOWE4OTE2M2NhZjE3NDk3YiIsImNsaWVudF9hdXRoX21ldGhvZCI6Im5vbmUiLCJzdWIiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluX3JlYWRfb25seSIsIm9wZW5pZCIsInNjaW0ucmVhZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIwM2RhZGVjNS00MTc4LTRiYjItOWJhZC0zODVhODAxNjIyYzUiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhcnVsIiwiZW1haWwiOiJhcnVsLnZhbm5hbGFAYnJvYWRjb20uY29tIiwiYXV0aF90aW1lIjoxNzA2MDI5MDk2LCJyZXZfc2lnIjoiODExNzg5NCIsImlhdCI6MTcwNjAyOTA5NiwiZXhwIjoxNzA2MDM2Mjk2LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.CfBae-9eGXAFTkqjR7QyCiBRz2GYa6wCBRWD9OhgcgDsa2kIi_OxodGboxKAT7yh51hBdymP0oO4K2UCcgFNQnG0YH0UC78_V4VZpwHYbwI7MFwEVcFTwbqnKCH7llOZ99NXGlWZAy0FRVAf1Bc__WtINfuiiYMR0qPtXDDZoYq4z7Ap0MTDeNdUQjxkn2qCTfgn4WeX4fFw0UA3zfBAU5vqvK_LUmlD6OUcaO92gpDfsh3YLERgjv1E25oSQE5n9HRifc37CEAsz5tm8cwF_vhJBpNpyE0-aXl_HXEoAC6e7M8cuV2LGJXGvQUs2LVKEz1H48qgka3qROSF5jioDw" -k
 
-{"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
+{"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
 ```
 
 
-curl https://api.sys.h2o-4-15402.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJqdGkiOiI2ODA3MzRlNGNjMjE0NDlhOTA3ZWU2NDIyMWQzNDZkYiIsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiY2xpZW50cy5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbGllbnRzLnNlY3JldCIsImNsaWVudHMud3JpdGUiLCJ1YWEuYWRtaW4iLCJzY2ltLndyaXRlIiwic2NpbS5yZWFkIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xpZW50cy5zZWNyZXQiLCJjbGllbnRzLndyaXRlIiwidWFhLmFkbWluIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJhZG1pbiIsImNpZCI6ImFkbWluIiwiYXpwIjoiYWRtaW4iLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjQ5MDQ1OTI1IiwiaWF0IjoxNzA2MDQwMjQ4LCJleHAiOjE3MDYwODM0NDgsImlzcyI6Imh0dHBzOi8vdWFhLnN5cy5oMm8tNC0xNTQwMi5oMm8udm13YXJlLmNvbS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJzY2ltIiwicGFzc3dvcmQiLCJjbGllbnRzIiwidWFhIiwiYWRtaW4iXX0.fCbIKOQCTsVR4DyF7WRSaoUUd6-d9dS0RL_zik8DMT2RSlpEtadXyNgg2yOVx5DClBFXMT6LN6gHv6re8vOqPEr_RYH_sxTylPNFj6q0X1p06BxXLEo6Z2heLy-iAFD725Fy25ZqMorpqjGau74dnH_e8Kfi6OScPpV4Blc_akl1dDZXLzcXLB7dflIyaFjdgehFJ_WRsQa91b7zenak0FCe-WAS3dBioDjiipQg8rsxOvVbkAODs6W2l_B7MU35y-XkIE7HwMnauiXq-G-f_N2aLEstTUUlnaEebo0cyHPAxbsEFyN32m1mGu3MAWequzQEJYZbvHVcWNmDTq-7fw"
+curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJqdGkiOiI2ODA3MzRlNGNjMjE0NDlhOTA3ZWU2NDIyMWQzNDZkYiIsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiY2xpZW50cy5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbGllbnRzLnNlY3JldCIsImNsaWVudHMud3JpdGUiLCJ1YWEuYWRtaW4iLCJzY2ltLndyaXRlIiwic2NpbS5yZWFkIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xpZW50cy5zZWNyZXQiLCJjbGllbnRzLndyaXRlIiwidWFhLmFkbWluIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJhZG1pbiIsImNpZCI6ImFkbWluIiwiYXpwIjoiYWRtaW4iLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjQ5MDQ1OTI1IiwiaWF0IjoxNzA2MDQwMjQ4LCJleHAiOjE3MDYwODM0NDgsImlzcyI6Imh0dHBzOi8vdWFhLnN5cy5oMm8tNC0xNTQwMi5oMm8udm13YXJlLmNvbS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJzY2ltIiwicGFzc3dvcmQiLCJjbGllbnRzIiwidWFhIiwiYWRtaW4iXX0.fCbIKOQCTsVR4DyF7WRSaoUUd6-d9dS0RL_zik8DMT2RSlpEtadXyNgg2yOVx5DClBFXMT6LN6gHv6re8vOqPEr_RYH_sxTylPNFj6q0X1p06BxXLEo6Z2heLy-iAFD725Fy25ZqMorpqjGau74dnH_e8Kfi6OScPpV4Blc_akl1dDZXLzcXLB7dflIyaFjdgehFJ_WRsQa91b7zenak0FCe-WAS3dBioDjiipQg8rsxOvVbkAODs6W2l_B7MU35y-XkIE7HwMnauiXq-G-f_N2aLEstTUUlnaEebo0cyHPAxbsEFyN32m1mGu3MAWequzQEJYZbvHVcWNmDTq-7fw"
 
 
 ```
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/token_key' -i -u 'admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/token_key' -i -u 'admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' -X GET \
    -H 'Accept: application/json' \
    -H 'If-None-Match: 1501570800000' -k
 
@@ -113,13 +113,13 @@ x-xss-protection: 1; mode=block
 ```
 
 ```
-avannala@avannalaCX6H4 tas % curl -k https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/token -u "admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -d grant_type=client_credentials
+avannala@avannalaCX6H4 tas % curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "admin:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -d grant_type=client_credentials
 
 {"access_token":"eyJqdGkiOiI5MGY0ZWVhMDg4NzA0ZDc2YWUzNjdjNTY2ZTUyYTgwMCIsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiY2xpZW50cy5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbGllbnRzLnNlY3JldCIsImNsaWVudHMud3JpdGUiLCJ1YWEuYWRtaW4iLCJzY2ltLndyaXRlIiwic2NpbS5yZWFkIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xpZW50cy5zZWNyZXQiLCJjbGllbnRzLndyaXRlIiwidWFhLmFkbWluIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJhZG1pbiIsImNpZCI6ImFkbWluIiwiYXpwIjoiYWRtaW4iLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjQ5MDQ1OTI1IiwiaWF0IjoxNzA2MDQwOTczLCJleHAiOjE3MDYwODQxNzMsImlzcyI6Imh0dHBzOi8vdWFhLnN5cy5oMm8tNC0xNTQwMi5oMm8udm13YXJlLmNvbS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJzY2ltIiwicGFzc3dvcmQiLCJjbGllbnRzIiwidWFhIiwiYWRtaW4iXX0.GSHB-UaH9VYsGSDa8Ouzz2NcJqbNTDDDPx_u9ntpvEhhQOEjZIZTxq21PU5VwGxs4EDTRv4cv8XUQ7co7fnLg0JMn_-_UlWW-uwVALXjZ5aZFaMip_28pYEAlrmKs9nlXRnC_AuDjUTrFvkAtfGwJ-PpJEjPLKzG6lbpf2oibLSEE84AROylgR50uwD-Shy3myBvrns7xDb_m_Cfi4UR7HVdCrT4-dXkaCLlDML5EdS0ZonAA8PBPZmjwhhJfDC85yXsW5svmMxDAIfMs1zdkPP4i7jKitWuySeOqu0QCFhNgk4IAtWguBzSyzgvNniTm1fO_SnNWJ6l07yrOZNPCQ","token_type":"bearer","expires_in":43199,"scope":"clients.read password.write clients.secret clients.write uaa.admin scim.write scim.read","jti":"90f4eea088704d76ae367c566e52a800"}%
 ```
 
 ```
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/Users' -i -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/Users' -i -X GET \
     -H 'Accept: application/json' \
     -H 'Authorization: Bearer eyJqdGkiOiIwOGMxNTU1Y2VmMjE0NjEzYTg5YTMxMzI3YTYyOGRmMSIsInN1YiI6ImFydWwzIiwiYXV0aG9yaXRpZXMiOlsidWFhLm5vbmUiXSwic2NvcGUiOlsidWFhLm5vbmUiXSwiY2xpZW50X2lkIjoiYXJ1bDMiLCJjaWQiOiJhcnVsMyIsImF6cCI6ImFydWwzIiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxODdmZTU4NCIsImlhdCI6MTcwNjA0OTgxNSwiZXhwIjoxNzA2MDkzMDE1LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDMiXX0.ZzE58rYxVtggVCWDEznJ19atbUNs1KFnMzWJxE0UdndwKyNp1LXTkRKOCW-_cv_UUwp0xeaRDXGL_n0PPKGSo2MiAhy3SPXvnoZlRJRVSRXEu6x0kXWkcdE9uNGUhIIC_o3EMgYaQdETWYijcFx9fjaPEEEvf1JUI75EtuRrnXXEDEVdETZdFGCp_wrB0imSk2XFzaDhKj5xDn0BAXwU_71LwtekWtdJMS-33WeXFx-WJz3vj1nJGN2_PMxhcvCaJnKxE_slUkTF61YxXnn6c5qa5fJyAA2LfZeRoQQjFeqI5TQ_3dnnSjImWrxLAHBrx7p48c7IrdQeb2Hi92ZF4g' \
     -H 'Content-Type: application/json' \
@@ -137,45 +137,45 @@ curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/Users' -i -X GET \
 
 ### Test cmds
 
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/token' -i -X POST \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token' -i -X POST \
    -H 'Content-Type: application/x-www-form-urlencoded' \
    -H 'Accept: application/json' \
    -d 'client_id=arul3&client_secret=vannala3&client_assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjU4ZDU1YzUwMGNjNmI1ODM3OTYxN2UwNmU3ZGVjNmNhIn0.eyJzdWIiOiJsb2dpbiIsImlzcyI6ImxvZ2luIiwianRpIjoiNThkNTVjNTAwY2M2YjU4Mzc5NjE3ZTA2ZTdhZmZlZSIsImV4cCI6MTIzNDU2NzgsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4ifQ.jwWw0OKZecd4ZjtwQ_ievqBVrh2SieqMF6vY74Oo5H6v-Ibcmumq96NLNtoUEwaAEQQOHb8MWcC8Gwi9dVQdCrtpomC86b_LKkihRBSKuqpw0udL9RMH5kgtC04ctsN0yZNifUWMP85VHn97Ual5eZ2miaBFob3H5jUe98CcBj1TSRehr64qBFYuwt9vD19q6U-ONhRt0RXBPB7ayHAOMYtb1LFIzGAiKvqWEy9f-TBPXSsETjKkAtSuM-WVWi4EhACMtSvI6iJN15f7qlverRSkGIdh1j2vPXpKKBJoRhoLw6YqbgcUC9vAr17wfa_POxaRHvh9JPty0ZXLA4XPtA&client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer&scope=scim.write&grant_type=client_credentials&token_format=opaque'
 
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/authorize?response_type=token&client_id=arul2&scope=cloud_controller.admin&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/authorize?response_type=token&client_id=arul2&scope=cloud_controller.admin&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
     -H 'Accept: application/x-www-form-urlencoded'
 
 
 
-curl -k 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/Users' -i -X GET \
+curl -k 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/Users' -i -X GET \
     -H 'Accept: application/json' \
     -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnN5cy5oMm8tNC0xNTQwMi5oMm8udm13YXJlLmNvbS90b2tlbl9rZXlzIiwia2lkIjoia2V5LTEiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5YmVhNDc4MjgyYjA0MGRlOThiYmU3OWNjZjNiNTY5OCIsInN1YiI6ImFydWw2IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiLCJzY2ltLnJlYWQiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiLCJzY2ltLnJlYWQiXSwiY2xpZW50X2lkIjoiYXJ1bDYiLCJjaWQiOiJhcnVsNiIsImF6cCI6ImFydWw2IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxMzBlZGJlYyIsImlhdCI6MTcwNjA1MzgwMywiZXhwIjoxNzA2MDk3MDAzLCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJhcnVsNiJdfQ.io8yNu-gNlMsaBxlnG4ZB-QOVMa2g98UVded1mQnx9Ba3cWGkEo-_h-qbSLgoVjLO4VU8BgMWYTh_NGa2P1qpxF1O1ySZXDTToAulUsJQoxSjoFnfWAbtpehCtgA0uuXYpEpbPGjaQm38jOWPFu8CsC0CEAFDZ9-blrDNbWVaWsZTULGFqevBFo6_qizYaxXf4y3VRsyajLu7caqoz2a9DLU7hDcrbciiMJ9L8Vx0c6EecAMaCUA8utQp73qBAkzZeOaRQ3K0cGl9rmjm_u0pdvCKksrLWF1eGSw31ACwsoMFHrFyjUH0jtN1M_puhdKTxcCJ8fJSlCdr8jIghwiIA' \
     -H 'Content-Type: application/json' \
     -H 'If-Match: 0'
 
-curl -k https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/token -u admin -d grant_type=client_credentials | jq -r .access_token
+curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u admin -d grant_type=client_credentials | jq -r .access_token
 
-curl -k 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/uaa/oauth/token' -i -X POST \
+curl -k 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/uaa/oauth/token' -i -X POST \
     -H 'Content-Type: application/x-www-form-urlencoded' \
     -H 'Accept: application/json' \
     -d 'client_id=admin&grant_type=password&username=arul&password=vannala&response_type=token'
 
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/authorize?response_type=token&client_id=app&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/authorize?response_type=token&client_id=app&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
     -H 'Accept: application/x-www-form-urlencoded' -k
 
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/authorize?response_type=code+id_token&client_id=admin&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/authorize?response_type=code+id_token&client_id=admin&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
     -H 'Accept: application/x-www-form-urlencoded'
 
 
-curl 'https://uaa.sys.h2o-4-15402.h2o.vmware.com/oauth/authorize?response_type=token&client_id=app&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
+curl 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/authorize?response_type=token&client_id=app&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F&login_hint=%257B%2522origin%2522%253A%2522uaa%2522%257D' -i -X GET \
     -H 'Accept: application/x-www-form-urlencoded'
 
-curl 'https://api.sys.h2o-4-15402.h2o.vmware.com/token' -i -X POST \
+curl 'https://api.sys.XXXXXXXXX.h2o.vmware.com/token' -i -X POST \
     -H 'Accept: application/json' \
     -H 'Content-Type: application/x-www-form-urlencoded' \
     -d 'client_id=admin&client_secret=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&client_assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjU4ZDU1YzUwMGNjNmI1ODM3OTYxN2UwNmU3ZGVjNmNhIn0.eyJzdWIiOiJsb2dpbiIsImlzcyI6ImxvZ2luIiwianRpIjoiNThkNTVjNTAwY2M2YjU4Mzc5NjE3ZTA2ZTdhZmZlZSIsImV4cCI6MTIzNDU2NzgsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4ifQ.jwWw0OKZecd4ZjtwQ_ievqBVrh2SieqMF6vY74Oo5H6v--ONhRt0RXBPB7ayHAOMYtb1LFIzGAiKvqWEy9f-TBPXSsETjKkAtSuM-WVWi4EhACMtSvI6iJN15f7qlverRSkGIdh1j2vPXpKKBJoRhoLw6YqbgcUC9vAr17wfa_POxaRHvh9JPty0ZXLA4XPtA&client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer&grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&token_format=opaque&response_type=token+id_token&scope=openid&assertion=eyJqa3UiOiJodHRwczovL2xvY2FsaG9zdDo4MDgwL3VhYS90b2tlbl9rZXlzIiwia2lkIjoibGVnYWN5LXRva2VuLWtleSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyYjI3MTQ2YS0yNGViLTRjZDYtOTYwMS1hNDk0ODA2NmZhNTciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwidXNlcl9uYW1lIjoic2RxcjFzbTk0YzFxIiwiYW1yIjpbInB3ZCJdLCJvcmlnaW4iOiJ1YWEiLCJpc3MiOiJodHRwOi8vbHQ5dmktN3Y1YXZtLmxvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsImNsaWVudF9pZCI6IkdWSHN5bWZkRFUzeiIsImF1ZCI6IkdWSHN5bWZkRFUzeiIsInppZCI6Imx0OXZpLTd2NWF2bSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIyYjI3MTQ2YS0yNGViLTRjZDYtOTYwMS1hNDk0ODA2NmZhNTciLCJhenAiOiJHVkhzeW1mZERVM3oiLCJzY29wZSI6WyJvcGVuaWQiXSwiYXV0aF90aW1lIjoxNzA1Njc0NDcwLCJleHAiOjE3MDU3MTc2NzAsImlhdCI6MTcwNTY3NDQ3MCwiZW1haWwiOiJzZHFyMXNtOTRjMXFAdGVzdC5vcmciLCJqdGkiOiJkYjJkNjg0NzBhMDg0MDg1OTAxN2YzYzJkNGM1NzhjMCIsInJldl9zaWciOiI4YWRhMTQ0YSIsImNpZCI6IkdWSHN5bWZkRFUzeiJ9.ouNMO4rxUpxqGlD9Z04NKkX3tTgZYiOozYCsGPTiHTpDsu-APsJPHCjq-FElpYTSkdjibNLT6NkjAlbwxtXo2c-5MKw_rLR1HrWX-tniIE-kE2KORtUqs8UZF5MnhHYbMp_UYcxTQhcHT8Aj15mEnKLJQUkGmYUfmgqA-BWNPpeCrwCUiuYIxZ4UJKHmHaJ07LK2ld6eG6Thae0ZX7CjiTkTG-Kklhuqt-qRairlgIsVbcf5G9EdadQ_PKBa1Sl-e-HGOpoVFAlcCsahZL8-tSkmlOw1KWo6CUEfHnsHOGvjqK2LlVrKwU2'
 
-curl 'https://api.sys.h2o-4-15402.h2o.vmware.com/oauth/token' -i -X POST \
+curl 'https://api.sys.XXXXXXXXX.h2o.vmware.com/oauth/token' -i -X POST \
     -H 'Accept: application/json' \
     -H 'Content-Type: application/x-www-form-urlencoded' \
     -d 'client_id=admin&client_secret=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&client_assertion=m2C0eagGkDz_RL5RqL1rRcc2sruflDW2mwAT7kBQLGunNqYZqqZAFOyMdtVBJ3t189a7Uo5oU-zhZiQvQKsmo6hjPwVP03gi4O-Es8M5qvCnIh9A1Yqyv84MXHzA3PXoNAq6jozCO0b9xGSgU6tDRb2KZQJ2EjipciW29WAEu6F4veiWugAAmHmstoL18bpz0BkSr4VZ-_8qZTQXVka3XFdvPcayon1OLejdcnU0VJXQ0JB_TbDWxO41TS1sNJIAkXlDmOTbQJy3Q2a5TkM8p2D8G5w3zGKr58NWzKw'
