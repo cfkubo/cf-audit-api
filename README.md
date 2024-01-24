@@ -7,9 +7,7 @@
 
 ### UAA opsman url:  https://opmanurl/uaa
 
-### Target uaac client totas uaa
-
-### Login with admin client creds. The creds are undertas tile credentials section for uaa "client admin credentials"
+### Login with admin client creds. The creds are under tas tile credentials section for uaa "client admin credentials"
 
 
 # TAS UAA Target
