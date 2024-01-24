@@ -95,3 +95,25 @@ curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
   -X GET \
   -H "Authorization: bearer 3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.I03cPZlkBxWCdXXgSPVbccRDAtCzzu86KBXbtS4mP0V8ct3_4JNQJHsNJ75eVTHLwkH9Y-PviGtIFFDxfSv71vKOoVXd2e4AY8jn4GwMWaR3oJY5QtWolCw" -k
 ```
+
+# Fetch Roles endpoint via curl
+```
+curl -k "https://api.sys.h2o-4-15402.h2o.vmware.com/v3/roles" \
+  -X GET \
+  -H "Authorization: bearer eyMTI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJhcnVsNiJdfQ.PuU9HqVaKp2ot9uf7_qnAUavTGqOtEIoRH94U2MA-465ZI00wxiRwETwNF57540rEsmzu0XN-9GS4HUnmnK2cJBS0mE5H5t9PuEw65jMrjZiBTlK3OXipCHh6_rOR-JjCrjdH1QFS4UTxhuIgk8I463OK8Wk_Qk-ONRA31A1pY4t2ekvyeUO6RA00ydsvYf3xKl40VUQAHPIFKxsA9yg4-HYuDeSXgxGr3NUY5S-GfUj4KearG5pzr60fy55d0jVtx1NVacNUZj1cpcqF0uVrxU4RCK47-Hp7cHDhbe5kPCsBo4XKV9fxdkDp9478DoSLCTFJx41xIc0_OU_fm5sTg" \
+  -H "Content-type: application/json"
+```
+
+# Fetch Spaces endpoint via curl
+```
+curl "https://api.example.org/v3/spaces" \
+-X GET \
+-H "Authorization: bearer [token]"
+```
+
+# Fetch Spaces Users endpoint via curl
+```
+curl "https://api.example.org/v3/spaces/:guid/users" \
+  -X GET \
+  -H "Authorization: bearer [token]"
+```
