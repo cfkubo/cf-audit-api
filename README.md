@@ -65,12 +65,27 @@ tas % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8
 {"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
 ```
 
-# Fetch the users endpoint via curl
+# Fetch Users endpoint via curl
 
 ```
 curl -k 'https://uaa.sys.XXXXXXXXX.h2o.vmware.com/Users' -i -X GET \
     -H 'Accept: application/json' \
-    -H 'Authorization: Bearer eyJqdGkiOiI5YmVhNDc4MjgyYjA0MGRlOThiYmU3OWNjZjNiNTY5OCIsInN1YiI6ImFydWw2IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiLCJzY2ltLnJlYWQiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiLCJzY2ltLnJlYWQiXSwiY2xpZW50X2lkIjoiYXJ1bDYiLCJjaWQiOiJhcnVsNiIsImF6cCI6ImFydWw2IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxMzBlZGJlYyIsImlhdCI6MTcwNjA1MzgwMywiZXhwIjoxNzA2MDk3MDAzLCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInNjaW0iLCJhcnVsNiJdfQ.io8yNu-gNlMsaBxlnG4ZB-QOVMa2g98UVded1mQnx9Ba3cWGkEo-_h-qbSLgoVjLO4VU8BgMWYTh_NGa2P1qpxF1O1ySZXDTToAulUsJQoxSjoFnfWAbtpehCtgA0uuXYpEpbPGjaQm38jOWPFu8CsC0CEAFDZ9-blrDNbWVaWsZTULGFqevBFo6_qizYaxXf4y3VRsyajLu7caqoz2a9DLU7hDcrbciiMJ9L8Vx0c6EecAMaCUA8utQp73qBAkzZeOaRQ3K0cGl9rmjm_u0pdvCKksrLWF1eGSw31ACwsoMFHrFyjUH0jtN1M_puhdKTxcCJ8fJSlCdr8jIghwiIA' \
+    -H 'Authorization: Bearer eyJqdGkiOiI5YmVhNDc4MjgyYjA0MGRlOThiYmU3OWNjZjNiNTY5OCIsInN1YiI6ImFydWw2IiwiYXV0aG9yabDYiLCJjaWQiOiJhcnVsNiIsImF6cCI6ImFydWw2IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxMzBlZGJlYyIsImlhdCI6MTcwNjA1MzgwMywiZXhwIjoxNzA2MDk3MDAzLCJpc3MiOi' \
     -H 'Content-Type: application/json' \
     -H 'If-Match: 0'
+```
+
+# Fetch Spaces endpoint via curl
+
+```
+curl "https://api.sys.XXXXXXXXXX.h2o.vmware.com/v3/spaces" \
+  -X GET \
+  -H "Authorization: bearer NUSlR73FQlZcqOI1LrlkCWMnSmwy6og1zmtltbTC7tlVqa-W0CSJcvzqHE9igy5d7eN-84j08kTWRWi5opCCYdeEXhsGzWobiWDYXwhVyVKcYnxwCgofUVBPhYu4vsStnXfJ0NhPbA8qm54514eEZxnoElEM8KZKkQbgD-uYWuhjm9B_I-X4KkVMeANYXmTfs-J8W6RdAY9Dw_jgjfpchSdB2M-kdg8B4bDHz01qYNkxrLHq-sazkD1-" -k
+```
+
+# Fetch Orgs endpoint via curl
+```
+tas % curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
+  -X GET \
+  -H "Authorization: bearer 3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.I03cPZlkBxWCdXXgSPVbccRDAtCzzu86KBXbtS4mP0V8ct3_4JNQJHsNJ75eVTHLwkH9Y-PviGtIFFDxfSv71vKOoVXd2e4AY8jn4GwMWaR3oJY5QtWolCw" -k
 ```
