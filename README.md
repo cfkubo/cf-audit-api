@@ -3,9 +3,9 @@
 </p>
 
 
-### UAAtas url:  uaa.<sys.domain> fortas
+### UAAtas url:  https://uaa.sys.domain
 
-### UAA opsman url:  <<opmanurl>>/uaa
+### UAA opsman url:  https://opmanurl/uaa
 
 ### Target uaac client totas uaa
 
