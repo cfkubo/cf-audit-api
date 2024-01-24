@@ -14,8 +14,7 @@
 
 # TAS UAA Target
 ```
-tas % uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
-uaac target : uaac target _
+uaac target uaa.sys.XXXXXXXXX.h2o.vmware.com  --skip-ssl-validation
 
 Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
@@ -23,7 +22,7 @@ Context: admin, from client admin
 
 # Login
 ```
-tas % uaac token client get admin -s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uaac token client get admin -s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 WARNING: Decoding token without verifying it was signed by its authoring UAA
 
@@ -35,8 +34,9 @@ Context: admin, from client admin
 # Create UAA admin readyonly client
 
 ```
-tas % uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
-
+uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
+```
+```
   scope: cloud_controller.admin_read_only scim.read
   client_id: arul6
   resource_ids: none
@@ -52,16 +52,18 @@ tas % uaac client add arul6 -s arul6  --authorized_grant_types client_credential
 # Fetch the brearer token via curl
 
 ```
-tas % curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "arul5:arul5" -d grant_type=client_credentials
-
+curl -k https://uaa.sys.XXXXXXXXX.h2o.vmware.com/oauth/token -u "arul5:arul5" -d grant_type=client_credentials
+```
+```
 {"access_token":"eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg","token_type":"bearer","expires_in":43199,"scope":"cloud_controller.admin_read_only","jti":"06abf6ff1d4845ab952b42f01ef06879"}%
 ```
 
 # Fetch the apps endpoint via curl
 
 ```
-tas % curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg" -k
-
+curl https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891 -X GET -H "Authorization: bearer eyJqdGkiOiIwNmFiZjZmZjFkNDg0NWFiOTUyYjQyZjAxZWYwNjg3OSIsInN1YiI6ImFydWw1IiwiYXV0aG9yaXRpZXMiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5hZG1pbl9yZWFkX29ubHkiXSwiY2xpZW50X2lkIjoiYXJ1bDUiLCJjaWQiOiJhcnVsNSIsImF6cCI6ImFydWw1IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJiZjAxY2Y5OSIsImlhdCI6MTcwNjA1MTgyOCwiZXhwIjoxNzA2MDk1MDI4LCJpc3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.D17-H6d6oLqPMGW7dYNnKcngFYixosvmuJSEAhsNEJptjPDBB_Tsbi_r7xTGyojRXRs0RXdLqKHE9kyFl58vjIALbPqmGWJthxpTSHs0G-LhiR01ZLeoPAdSqjArY6HL6okpDRQOnJa2CtNvK75VUABH3LdFZ23H3saHBt0tZlz8_dNfIsDWl980xik-CPYd8ud4xWxITqDLO23J9EQO8ORd5xA-O7JhyU1aRgOk0nJSoG77OiqbBtD3AYRBD25w_x3WsnUne--W5wAxRtBHAJzEV8Gi16TtZqUzHlMGUVToq2u4-BzBylBPV7-1xqLLzZ9AJF434nxKt4ZQJ7RdVg" -k
+```
+```
 {"guid":"9d2d4811-9ecd-464b-8e80-901e17223891","created_at":"2024-01-23T02:25:47Z","updated_at":"2024-01-23T02:38:08Z","name":"rabbitmq-demo","state":"STARTED","lifecycle":{"type":"buildpack","data":{"buildpacks":[],"stack":"cflinuxfs4"}},"relationships":{"space":{"data":{"guid":"a0ff4e15-dd2c-45a7-9c65-615606ced810"}}},"metadata":{"labels":{},"annotations":{}},"links":{"self":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891"},"environment_variables":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/environment_variables"},"space":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/spaces/a0ff4e15-dd2c-45a7-9c65-615606ced810"},"processes":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/processes"},"packages":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/packages"},"current_droplet":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets/current"},"droplets":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/droplets"},"tasks":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/tasks"},"start":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/start","method":"POST"},"stop":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/actions/stop","method":"POST"},"revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions"},"deployed_revisions":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/revisions/deployed"},"features":{"href":"https://api.sys.XXXXXXXXX.h2o.vmware.com/v3/apps/9d2d4811-9ecd-464b-8e80-901e17223891/features"}}}%
 ```
 
@@ -85,7 +87,7 @@ curl "https://api.sys.XXXXXXXXXX.h2o.vmware.com/v3/spaces" \
 
 # Fetch Orgs endpoint via curl
 ```
-tas % curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
+curl "https://api.sys.XXXXXXXX.h2o.vmware.com/v3/organizations" \
   -X GET \
   -H "Authorization: bearer 3MiOiJodHRwczovL3VhYS5zeXMuaDJvLTQtMTU0MDIuaDJvLnZtd2FyZS5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXJ1bDUiLCJjbG91ZF9jb250cm9sbGVyIl19.I03cPZlkBxWCdXXgSPVbccRDAtCzzu86KBXbtS4mP0V8ct3_4JNQJHsNJ75eVTHLwkH9Y-PviGtIFFDxfSv71vKOoVXd2e4AY8jn4GwMWaR3oJY5QtWolCw" -k
 ```
