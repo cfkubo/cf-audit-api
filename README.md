@@ -33,7 +33,7 @@ Target: https://uaa.sys.XXXXXXXXX.h2o.vmware.com
 Context: admin, from client admin
 ```
 
-# Create UAA admin readyonly client
+# Create UAA admin ready-only client
 
 ```
 uaac client add arul6 -s arul6  --authorized_grant_types client_credentials --scope cloud_controller.admin_read_only,scim.read --authorities cloud_controller.admin_read_only,scim.read
