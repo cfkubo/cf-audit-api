@@ -2,11 +2,13 @@
 <img src="Broadcom-vmware.png" width="300" alt="Online Boutique" />
 </p>
 
+# how to create UAA client and Query the TAS api for Audit reporting.
+
 ### CF API: https://v3-apidocs.cloudfoundry.org/version/3.155.0/index.html#introduction
 
 ### UAA API: https://docs.cloudfoundry.org/api/uaa/version/76.31.0/index.html#overview
 
-### The below procedure explain how to create UAA client and Query the TAS api for Audit reporting.
+
 
 ### UAA TAS URL:  https://uaa.SYS-DOMAIN
 
