@@ -8,7 +8,7 @@
 
 ### UAA API: https://docs.cloudfoundry.org/api/uaa/version/76.31.0/index.html#overview
 
-
+### Create UAA clients: https://docs.vmware.com/en/VMware-Tanzu-Application-Service/5.0/tas-for-vms/uaa-user-management.html
 
 ### UAA TAS URL:  https://uaa.SYS-DOMAIN
 
